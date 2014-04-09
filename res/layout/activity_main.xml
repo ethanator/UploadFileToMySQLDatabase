@@ -9,67 +9,44 @@
     tools:context=".MainActivity" >
 
     <EditText
-        android:id="@+id/editText_acceleration_y"
-        android:layout_width="wrap_content"
+        android:id="@+id/editText_file"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText_acceleration_x"
-        android:layout_below="@+id/editText_acceleration_x"
-        android:layout_marginTop="18dp"
-        android:ems="10" />
-
-    <EditText
-        android:id="@+id/editText_acceleration_x"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button_update"
-        android:layout_alignParentRight="true"
+        android:layout_above="@+id/button_save"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="37dp"
-        android:ems="10" >
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:gravity="top"
+        android:inputType="textMultiLine" >
 
         <requestFocus />
     </EditText>
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText_acceleration_y"
-        android:layout_alignParentLeft="true"
-        android:text="Acceleration-X" />
-
-    <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText_acceleration_y"
-        android:layout_alignLeft="@+id/textView1"
-        android:text="Accelaration-Y" />
-
-    <TextView
-        android:id="@+id/TextView02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/TextView01"
-        android:layout_marginTop="42dp"
-        android:text="Acceleration-Z" />
-
-    <EditText
-        android:id="@+id/editText_acceleration_z"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/TextView02"
-        android:layout_alignLeft="@+id/editText_acceleration_y"
-        android:ems="10" />
-
     <Button
         android:id="@+id/button_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView_status"
+        android:layout_alignLeft="@+id/editText_file"
+        android:layout_marginBottom="27dp"
+        android:text="Update" />
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_update"
+        android:layout_alignLeft="@+id/button_update"
+        android:text="Save" />
+
+    <TextView
+        android:id="@+id/textView_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText_acceleration_z"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp"
-        android:text="Update" />
+        android:layout_marginBottom="28dp"
+        android:text="The file has not been created yet."
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
 </RelativeLayout>
